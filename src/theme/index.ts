@@ -9,11 +9,10 @@ const theme: DefaultTheme = {
     charcoalGrey: "#373d40",
   },
   fonts: {
-    fontFamily: "",
     fontSize: {
-      small: 0,
-      medium: 0,
-      large: 0,
+      small: '14px',
+      medium: '16px',
+      large: '20px',
     },
   },
 };

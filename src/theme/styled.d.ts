@@ -13,11 +13,10 @@ declare module "styled-components" {
       charcoalGrey: string;
     };
     fonts: {
-      fontFamily: "";
       fontSize: {
-        small: number;
-        medium: number;
-        large: number;
+        small: string;
+        medium: string;
+        large: string;
       };
     };
   }
