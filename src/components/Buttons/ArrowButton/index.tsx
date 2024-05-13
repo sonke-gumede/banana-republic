@@ -12,16 +12,25 @@ const Button = styled.button`
     cursor: pointer;
   }
 `;
+
+const Image = styled.img<{ toggled?: boolean }>`
+  && {
+    transform: ${({ toggled }) =>
+      toggled ? `rotateY(3.142rad);` : `rotateY(0)`};
+  }
+`;
 interface ArrowButtonProps {
   onClick: (event: React.BaseSyntheticEvent<any>) => void;
+  toggled?: boolean;
 }
 
 const ArrowButton: React.FunctionComponent<ArrowButtonProps> = ({
   onClick,
+  toggled,
 }) => {
   return (
     <Button onClick={onClick}>
-      <img src="src/assets/images/arrow.svg" />
+      <Image src="src/assets/images/arrow.svg" toggled={toggled} />
     </Button>
   );
 };

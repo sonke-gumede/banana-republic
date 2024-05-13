@@ -34,7 +34,11 @@ const Content = styled.div`
   }
 `;
 
-const Left: React.FunctionComponent<{}> = () => {
+interface LeftProps {
+  onToggle: (event: React.BaseSyntheticEvent) => void;
+  toggled?: boolean;
+}
+const Left: React.FunctionComponent<LeftProps> = ({ onToggle,toggled }) => {
   return (
     <Container>
       <AvatarCaontainer>
@@ -44,7 +48,7 @@ const Left: React.FunctionComponent<{}> = () => {
         <h1>Front-end challenge!</h1>
         <p>This is a design that you will need to code up and impress</p>
       </Content>
-      <ArrowButton onClick={()=>{}}/>
+      <ArrowButton onClick={onToggle} toggled={toggled}/>
     </Container>
   );
 };
