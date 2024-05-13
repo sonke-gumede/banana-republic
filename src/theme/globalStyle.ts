@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body, html {
     font-family: Nimbus-san;
-    background-color: ${(props) => props.theme.colors.paleGrey};
+    background-color: ${(props) => props.theme.colors.cloudyBlue};
     color: ${(props) => props.theme.colors.charcoalGrey};
     margin: 0;
     place-items: center;
