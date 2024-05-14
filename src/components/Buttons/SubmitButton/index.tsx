@@ -12,6 +12,7 @@ const StyledButton = styled.button<{ varient: "default" | "primary" }>`
       ${({ theme, varient }) =>
         varient === "primary" ? "#86E3C6" : theme.colors.cloudyBlue};
     border-radius: 5px;
+    cursor: pointer;
   }
 `;
 interface ButtonProps extends React.ButtonHTMLAttributes<any> {

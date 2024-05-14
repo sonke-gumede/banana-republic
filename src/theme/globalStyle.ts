@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     place-items: center;
     min-height: 100vh;
-  }`;
+  }
+  `;
 
 export default GlobalStyle;

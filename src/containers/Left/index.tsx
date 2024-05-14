@@ -11,6 +11,13 @@ const Container = styled.div`
     border-top-left-radius: 25px;
     padding: 30px 55px;
     text-align: center;
+    @media only screen and (max-width: 600px) {
+        & {
+            border-top-right-radius: 25px;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 0;
+        }
+      }
   }
 `;
 

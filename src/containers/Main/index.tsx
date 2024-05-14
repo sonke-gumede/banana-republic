@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Left from "../Left";
 import Right from "../Right";
 import { useState } from "react";
+
 const Main = styled.div`
   margin-top: 30px;
   border-radius: 20px;
@@ -11,6 +12,13 @@ const Main = styled.div`
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+
+  @media only screen and (max-width: 600px) {
+    & {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 `;
 
 const Container: React.FunctionComponent<{}> = () => {

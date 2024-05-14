@@ -7,7 +7,7 @@ const StyledInput = styled.input`
     border: solid thin ${({ theme }) => theme.colors.cloudyBlue};
     color: ${({ theme }) => theme.colors.charcoalGrey};
     border-radius: 5px;
-    width: 80%;
+    width: -webkit-fill-available;
     padding: 0px 5px;
     &:focus {
       outline: none !important;

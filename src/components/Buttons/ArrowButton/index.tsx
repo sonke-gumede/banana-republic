@@ -10,15 +10,34 @@ const Button = styled.button`
     padding: 10px;
     align-self: center;
     cursor: pointer;
+    & > .arrow-left {
+      transform: rotateY(0deg);
+      transition: transform 0.3s linear;
+    }
+
+    & > .arrow-right {
+      transform: rotateY(180deg);
+      transition: transform 0.3s linear;
+    }
+
+    @media only screen and (max-width: 600px) {
+      & {
+        transform: rotate(90deg) !important;
+      }
+      .arrow-left {
+        transform: rotateY(0) !important;
+        transition: transform 0.3s linear;
+      }
+      .arrow-right {
+        transform: rotateY(3.142rad) !important;
+        transition: transform 0.3s linear;
+      }
+    }
   }
 `;
 
-const Image = styled.img<{ toggled?: boolean }>`
-  && {
-    transform: ${({ toggled }) =>
-      toggled ? `rotateY(3.142rad);` : `rotateY(0)`};
-  }
-`;
+const Image = styled.img``;
+
 interface ArrowButtonProps {
   onClick: (event: React.BaseSyntheticEvent<any>) => void;
   toggled?: boolean;
@@ -30,7 +49,10 @@ const ArrowButton: React.FunctionComponent<ArrowButtonProps> = ({
 }) => {
   return (
     <Button onClick={onClick}>
-      <Image src="src/assets/images/arrow.svg" toggled={toggled} />
+      <Image
+        src="src/assets/images/arrow.svg"
+        className={toggled ? "arrow-right" : "arrow-left"}
+      />
     </Button>
   );
 };
